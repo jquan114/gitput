@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../views/head.ejs");%>
+</head>
+<body>
+
+    <h1>Welcome to gitPub!</h1>
+    <ul style="text-align: left;">
+        <% for(let i = 0; i < food.length; i++) {%>
+            <li>
+               <a href="./food/<%=i%>">
+                <% let foodName = food[i].name;
+                    let capitalized = foodName.charAt(0).toUpperCase() + foodName.slice(1);%>
+                <%= capitalized%>
+               </a>
+            </li>
+        <%}%>
+    </ul> , 
+    <a href="/">Back</a>
+</body>
+</html>

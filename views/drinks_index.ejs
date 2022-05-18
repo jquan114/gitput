@@ -1,0 +1,23 @@
+<body>
+  <h1>Welcome to gitPub!</h1>
+  <ul style="text-align: left;">
+      <% for(let i = 0; i < drinks.length; i++) {%>
+          <li>
+             <a href="./drinks/<%=i%>">
+              <% let drinkName = drinks[i].name;
+                  let capitalized = drinkName.charAt(0).toUpperCase() + drinkName.slice(1);%>
+              <%= capitalized%>
+             </a>
+          </li>
+      <%}%>
+  </ul>
+  <a href="/">Back</a>
+</body>
+
+<style type="text/css">
+  body {
+    color: blanchedalmond;
+    background-color: steelblue;
+  }
+</style>
+</html>
